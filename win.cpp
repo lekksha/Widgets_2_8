@@ -25,10 +25,11 @@ Win::Win(QWidget *parent) : QWidget(parent) {
     layout4->addLayout(layout1);
     layout4->addLayout(layout2);
     layout4->addLayout(layout3);    // связь сигнала нажатия кнопки и слота закрытия окна
-    connect(calcbutton,&QPushButton::clicked,
+
+    connect(calcbutton,&QPushButton::clicked,   // добавить логику для нажатия еа кнопку +1
             edit1, &Counter::add_one);
-    connect(edit1, &Counter::tick_signal,
+    connect(edit1, &Counter::tick_signal,   // добавить логику для добавления единицы во второе поле
             edit2, &Counter::add_one);
-    connect(exitbutton, &QPushButton::clicked,
+    connect(exitbutton, &QPushButton::clicked,  // добавить логику для кнопки закрытия программы
             this, &Win::close);
 }
