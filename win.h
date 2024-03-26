@@ -28,7 +28,8 @@ class Win: public QWidget {
 protected:
     QLabel *label1;
     QLabel *label2;
-    Counter *edit1, *edit2;
+    Counter *edit1;
+    Counter *edit2;
     QPushButton *calcbutton;
     QPushButton *exitbutton;
 public:
